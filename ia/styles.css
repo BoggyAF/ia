@@ -1,0 +1,317 @@
+/*Global styles*/
+
+* {
+	color: #303030;
+}
+*::before
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	font-size: 1.5rem;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+section {
+	padding: 5rem 0rem;
+}
+
+header {
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	z-index: 1;
+	top: 0rem;
+	left: 0rem;
+}
+
+.container {
+	width: 100%;
+	max-width: 98rem;
+	margin: 0rem auto;
+	padding: 0rem;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.nav-logo {
+	width: 12rem;
+}
+
+.hamburger {
+	background-color: transparent;
+	border: 0rem;
+	color: #ffffff !important;
+	display: none;
+	font-size: 20px;
+	margin: 2rem;
+	cursor: pointer;
+}
+
+.hamburger:focus {
+	outline: none;
+}
+
+.hamburger i {
+	color: #ffffff;
+}
+
+.nav-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+	background-color: transparent;
+}
+
+.nav-item {
+	margin: 0;
+}
+
+.nav-link {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	display: inline-block;
+	color: #ffffff;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px 20px;
+}
+
+.hero-image {
+	width: 100%;
+	height: 80vh;
+	background: url("images/hero.svg") fixed no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-image:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 5rem;
+	background: url("images/wave.svg") center no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+
+.main-text {
+	width: 100%;
+	max-width: 50rem;
+	color: white;
+	transform: translateY(40%);
+}
+
+.main-text h3 {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-family: 'Jura', sans-serif;
+}
+
+.main-text h1 {
+	font-family: 'Jura', sans-serif;
+	text-transform: uppercase;
+	font-size: 4rem;
+	margin: 1rem 0rem;
+}
+
+.btn {
+	background-color: #95AB3D;
+	border-radius: 2rem;
+	color: white;
+	display: inline-block;
+	margin: 1rem 0rem 0rem 0rem;
+	padding: 1rem 2.5rem;
+	text-transform: uppercase;
+	transition: background-color 600ms;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #912A3C;
+}
+
+.title-heading {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 5rem;
+}
+
+.title-heading h1 {
+	font-size: 2rem;
+	ont-family: 'Jura', sans-serif; 
+	margin: 0.5rem 0rem 1rem 0rem;;
+}
+
+.title-heading h3 {
+	font-size: 1.5rem;
+	ont-family: 'Jura', sans-serif;
+}
+
+.title-heading p {
+	text-transform: lowercase;
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 2.5rem;
+}
+
+.cards-grid-item {
+	height: 40rem;
+	padding: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+}
+
+.card1 {
+	background: url("images/card1.svg") center no-repeat;
+}
+
+.card2 {
+	background: url("images/card2.svg") center no-repeat;
+}
+
+.card3 {
+	background: url("images/card3.svg") center no-repeat;
+}
+
+.quotes-section {
+	width: 100%;
+	height: 80vh;
+	background: url("images/hero2.svg") fixed no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.quotes-section::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -1px;
+	width: 100%;
+	height: 5rem;
+	background: url("images/wave-reversed.svg") center no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+
+.quote {
+	width: 100%;
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	text-align: center;
+}
+
+.quote-text {
+	padding: 0 1.5rem;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.quote-text i{
+	position: absolute;
+	top: -10rem;
+	left: 50%;
+	font-size: 8rem;
+	transform: translateX(-50%);
+	color: #912A3C;
+}
+
+.quote-portrait img{
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	border: 4px solid #912A3C;
+}
+
+footer {
+	padding: 0.2rem 0;
+	background-color: #548687;
+	text-align: center;
+}
+
+/* @media screen and (max-width: 500px) { */
+	/* .cards-grid-item p { */
+		/* width: 20rem; */
+		/* position: relative; */
+	/* } */
+/* } */
+
+@media screen and (max-width: 750px) {
+	.nav-list {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		border-top: 2px solid rgba(255,255,255,0.2);
+		background-color: #3891a6;
+		border-bottom: 0;
+	}
+	
+	.nav-link {
+		color: #303030;
+	}
+	
+	.nav-list.show {
+		display: flex;
+		position: center;
+		padding: 0;
+		margin: 0;
+	}
+	
+	nav.show {
+		background-color: #338699;
+	}
+	
+	.hamburger {
+		display: block;
+	}
+	
+	.logo {
+		width: 80px;
+	}
+	
+	.main-text {
+		transform: translateY(30%);
+	}
+	
+}
