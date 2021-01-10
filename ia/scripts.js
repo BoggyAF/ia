@@ -16,17 +16,17 @@ hamburger.addEventListener('click', () => {
 
 window.addEventListener("DOMContentLoaded", function () {
 
-  var form = document.getElementById("contact-form");
+  var form = document.getElementById('contact-form');
   // var button = document.getElementById("submit");
-  var status = document.getElementById("status");
-  var email = document.getElementById("email");
+  var status = document.getElementById('status');
+  var email = document.getElementById('email');
 
   // Functii status
 
   function success(response) {
     form.reset();
     status.classList.add("success");
-    status.innerHTML = response;
+    status.innerHTML = "Thanks!";
   }
 
   function error(response) {
@@ -46,8 +46,28 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function Post(data, success, error) {
     if (data.value.includes("@")&&data.value.includes(".")) {
-      success("Thanks!");
+      success();
     } else {
       error("Please make sure to enter a valid email adress.");
     };
 }
+
+// Home Form Logic
+
+
+window.addEventListener("DOMContentLoaded", function () {
+	var formDiv = document.getElementById('form-div');
+	var closeBtn = document.getElementById('btn-close');
+	var openBtn = document.getElementById('btn-open');
+	var mainText = document.getElementById('main-text');
+
+	closeBtn.addEventListener('click', function () {
+		formDiv.style.display = "none";
+		mainText.style.transform = "translateY(40%)";
+	});
+
+	openBtn.addEventListener('click', function () {
+		formDiv.style.display = "block";
+		mainText.style.transform = "translateY(13.1%)";
+	});
+});

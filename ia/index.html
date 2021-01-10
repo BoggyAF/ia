@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
 	
 </head>
-<body>
+<body id="body">
 	<header>
 		<div class="header-container">
 			<div class="container">
@@ -48,15 +48,40 @@
 	
 	<section class="hero-image">
 		<div class="container">
-			<div class="main-text">
+			<div class="main-text" id="main-text">
 				<h3>Who</h3>
 				<h1>Am I?</h1>
 				<p>
 				This is a question that I should ask myself everyday. It's a question that helps me to evaluate my life, and what it means to me.<br> But most importantly, I am passionate about my work.
 				</p>
 				<div class="contact-btn">
-					<a href="contact.html" class="btn">Contact Me</a>
+					<button href="contact.html" class="btn" id="btn-open">Contact Me</button>
 				</div>
+				
+				<div class="contact-form" id="form-div">
+					<form action="" id="contact-form" class="form-container">
+						<button type="button" class="btn cancel" id="btn-close">Close</button>
+						
+						<h2>Send Message</h2>
+						<div class="input-box">
+							<input type="text" id="name" name="name" required="required">
+							<span>Full Name</span>
+						</div>
+						<div class="input-box">
+							<input type="text" id="email" name="email" required="required">
+							<span>Email</span>
+						</div>
+						<div class="input-box">
+							<textarea required="required" id="message" maxlength="500"></textarea>
+							<span>Write your message...</span>
+						</div>
+						<div class="input-box">
+							<input type="submit" name="submit" value="Submit">
+						</div>
+					</form>
+					<div id="status"></div>
+				</div>
+		</div>
 			</div>
 		</div>
 	</section>
@@ -70,15 +95,15 @@
 			</div>
 			
 			<div class="cards-grid">
-				<a href="work.html#design" class="cards-grid-item card1">
+				<a href="experience.html#design" class="cards-grid-item card1">
 					<h1>Graphic design</h1>
 					<p>Probably one of the most valuable and rewarding assets of mine to this day.<br>I get the opportunity to try exciting new ideas that have never been attempted before</p>
 				</a>
-				<a href="work.html#programming" class="cards-grid-item card2">
+				<a href="experience.html#programming" class="cards-grid-item card2">
 					<h1>Programming</h1>
 					<p> The sheer joy of making things. Programming is fundamentally about creating solutions to problems. At the end of the day, you have created something that didn’t exist that morning, and that is in and of itself satisfying.</p>
 				</a>
-				<a href="work.html#leadership" class="cards-grid-item card3">
+				<a href="experience.html#leadership" class="cards-grid-item card3">
 					<h1>Leadership</h1>
 					<p>Tutoring others is my favorite way to learn because it solidifies my knowledge while allowing me to see how others solve problems using different methods.</p>
 				</a>

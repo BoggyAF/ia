@@ -19,7 +19,14 @@ html {
 body {
 	margin: 0;
 	background-color:white;
+	opacity: 1;
+    transition-duration: 0.7s;
+    transition-property: opacity;
 }
+
+body.fade {
+    opacity: 0;
+ }
 
 a {
 	text-decoration: none;
@@ -187,6 +194,8 @@ nav {
 .btn,
 .btn-alt {
 	background-color: #95AB3D;
+	border: 0rem;
+	outline: none;
 	border-radius: 2rem;
 	color: white;
 	display: inline-block;
@@ -199,6 +208,27 @@ nav {
 
 .btn:hover {
 	background-color: #912A3C;
+}
+
+
+.hero-image .container .contact-form {
+	margin-top: 1rem;
+	max-width: 600px;
+	padding: 10px;
+	background-color: white;
+	transform: translateY(-50px);
+	display: none;
+}
+
+.hero-image .container .contact-form #status {
+	width: 96%;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 1%;
+	color: white;
+	font-size: 10px;
+	margin-top: 10px;
 }
 
 .title-heading {
@@ -281,6 +311,10 @@ nav {
 	padding: 0 1.5rem;
 	margin-bottom: 2rem;
 	position: relative;
+}
+
+.quote-text p {
+	font-size: 2.5rem;
 }
 
 .quote-text i{
@@ -397,7 +431,7 @@ nav {
 	margin: 0;
 }
 
-.contact-form {
+.contact-container .contact-form {
 	width: 40%;
 	padding: 40px;
 	background: white;
@@ -755,6 +789,31 @@ footer {
 	#about-footer::before {
 	transform: translateY(-40px);
 	}
+	
+	.experience .container,
+	.education-section .container {
+		width: 50vh;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.experience .container .experience-info,
+	.education-section .container .experience-info {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.education-section .container #index1 { order: 2; }
+	.education-section .container #index2 { order: 1; }
+	
+	.experience .container #index1 { order: 2; }
+	.experience .container #index2 { order: 1; }
+	
+	.experience .container .meta-frame,
+	.education-section .container .meta-frame {
+		margin-top: 5rem;	
+	}
 }
 
 @media screen and (max-width: 1050px) {
@@ -783,6 +842,10 @@ footer {
 	width: 60%;
 	padding: 40px;
 	background: white;
+	}
+	
+	.hero-image .container .contact-form {
+		width: 100%;
 	}
 	
 	.about .container {
@@ -828,10 +891,6 @@ footer {
 		width: 80px;
 	}
 	
-	.main-text {
-		transform: translateY(30%);
-	}
-	
 	.contact {
 		padding: 100px 0px;
 	}
@@ -873,6 +932,10 @@ footer {
 	
 	#about-footer::before	{
 	transform: translateY(-30px);
+	}
+	
+	.hero-image .container .contact-form {
+		width: 95%;
 	}
 }
 
